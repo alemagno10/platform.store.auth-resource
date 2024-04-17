@@ -19,7 +19,7 @@ pipeline {
         stage('Build Image'){
             steps {
                 script {
-                    auth = docker.build("alemagno10/Auth:${env.BUILD_ID}", "-f Dockerfile .")
+                    auth = docker.build("alemagno10/auth:${env.BUILD_ID}", "-f Dockerfile .")
                 }
             }
         }    
